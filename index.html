@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ATUALIZADO: Título da página -->
+    <title>Portal Algoritmos - Fatec Mogi Mirim</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header (Reutilizado) -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="img/fatec_mogi_mirim.png" alt="Logo Fatec Mogi Mirim" class="h-12 md:h-16">
+            </div>
+            <div class="flex items-center space-x-4">
+                 <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        
+        <!-- ATUALIZADO: Seção de Apresentação -->
+        <section class="text-center mb-12">
+            <h1 class="text-3xl md:text-5xl font-bold cps-red mb-2">Algoritmos e Lógica de Programação</h1>
+            <p class="text-lg md:text-xl">Um portal interativo para os materiais da disciplina IAL025.</p>
+        </section>
+
+        <!-- ATUALIZADO: Seção Interativa -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-center mb-8">Os Fundamentos da Construção de Algoritmos</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Pilar 1: Sequência -->
+                <div class="flip-card h-48">
+                    <div class="flip-card-inner shadow-lg rounded-lg">
+                        <div class="flip-card-front bg-white border-t-4 border-cps-red"><h3 class="text-xl font-semibold text-gray-700">Sequência</h3></div>
+                        <div class="flip-card-back bg-cps-red text-white"><p class="text-sm">A execução de instruções passo a passo, em uma ordem lógica e predefinida, formando a base de qualquer programa.</p></div>
+                    </div>
+                </div>
+                <!-- Pilar 2: Seleção -->
+                <div class="flip-card h-48">
+                    <div class="flip-card-inner shadow-lg rounded-lg">
+                        <div class="flip-card-front bg-white border-t-4 border-cps-red"><h3 class="text-xl font-semibold text-gray-700">Seleção</h3></div>
+                        <div class="flip-card-back bg-cps-red text-white"><p class="text-sm">A capacidade de tomar decisões. O algoritmo escolhe qual caminho seguir com base em condições lógicas (`se... senão`).</p></div>
+                    </div>
+                </div>
+                <!-- Pilar 3: Repetição -->
+                <div class="flip-card h-48">
+                    <div class="flip-card-inner shadow-lg rounded-lg">
+                        <div class="flip-card-front bg-white border-t-4 border-cps-red"><h3 class="text-xl font-semibold text-gray-700">Repetição</h3></div>
+                        <div class="flip-card-back bg-cps-red text-white"><p class="text-sm">Executar um bloco de código várias vezes (`enquanto` uma condição for verdadeira ou `para` um número fixo de vezes).</p></div>
+                    </div>
+                </div>
+                <!-- Pilar 4: Abstração -->
+                <div class="flip-card h-48">
+                    <div class="flip-card-inner shadow-lg rounded-lg">
+                        <div class="flip-card-front bg-white border-t-4 border-cps-red"><h3 class="text-xl font-semibold text-gray-700">Abstração</h3></div>
+                        <div class="flip-card-back bg-cps-red text-white"><p class="text-sm">Simplificar a complexidade criando subprogramas (funções ou rotinas) que resolvem tarefas específicas.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ATUALIZADO: Seção de Materiais -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-xl">
+            <h2 class="text-2xl font-bold mb-6 text-center">Materiais de Aula</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <a href="https://maromo.my.canva.site/algo-001" target="_blank" class="material-card"><h3 class="font-bold text-lg cps-red mb-2">Material 01</h3><p class="text-sm">Preparação do Ambiente: Instalação e configuração de VS Code, Git e GitHub.</p></a>
+                <a href="https://maromo.my.canva.site/algo-002" target="_blank"  class="material-card"><h3 class="font-bold text-lg cps-red mb-2">Material 02</h3><p class="text-sm">Introdução à Programação: O que são programas, linguagens, compiladores e VMs.</p></a>
+                <a href="https://maromo.my.canva.site/algo-003" target="_blank"  class="material-card"><h3 class="font-bold text-lg cps-red mb-2">Material 03</h3><p class="text-sm">Tipos de Dados e Variáveis: Conceitos de constantes, variáveis e tipos fundamentais.</p></a>
+                <a href="https://maromo.my.canva.site/algo-004" target="_blank"  class="material-card"><h3 class="font-bold text-lg cps-red mb-2">Material 04</h3><p class="text-sm">Fluxogramas e Pseudocódigo: Representando a lógica de algoritmos de forma visual e estruturada.</p></a>
+                <a href="https://maromo.my.canva.site/algo-005" target="_blank"  class="material-card"><h3 class="font-bold text-lg cps-red mb-2">Material 05</h3><p class="text-sm">Estruturas de Controle (Decisão): Tomando decisões com `if-else` e `switch-case`.</p></a>
+                <a href="https://maromo.my.canva.site/algo-006" target="_blank"  class="material-card"><h3 class="font-bold text-lg cps-red mb-2">Material 06</h3><p class="text-sm">Estruturas de Controle (Repetição): Criando laços com `for`, `while` e `do-while`.</p></a>
+                <a href="https://maromo.my.canva.site/algo-007" target="_blank"  class="material-card"><h3 class="font-bold text-lg cps-red mb-2">Material 07</h3><p class="text-sm">Vetores e Matrizes: Armazenando e manipulando conjuntos de dados com arrays.</p></a>
+                <a href="https://maromo.my.canva.site/algo-008" target="_blank"  class="material-card"><h3 class="font-bold text-lg cps-red mb-2">Material 08</h3><p class="text-sm">Funções e Modularidade: Organizando código em blocos reutilizáveis com parâmetros e retorno.</p></a>
+                <a href="https://maromo.my.canva.site/algo-009" target="_blank"  class="material-card"><h3 class="font-bold text-lg cps-red mb-2">Material 09</h3><p class="text-sm">Exercícios de Fixação: Problemas práticos para consolidar os conceitos de lógica e controle de fluxo.</p></a>
+                <a href="https://maromo.my.canva.site/algo-010" target="_blank"  class="material-card"><h3 class="font-bold text-lg cps-red mb-2">Material 10</h3><p class="text-sm">Roteiro de Uso do Git: Guia prático para usar o Git de forma segura em ambiente de laboratório.</p></a>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ATUALIZADO: Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-4 text-center">
+            <p>© 2025 - Disciplina de Algoritmos e Lógica de Programação | Fatec Mogi Mirim "Arthur de Azevedo"</p>
+            <p class="text-sm text-gray-400">Desenvolvido por Prof. Mestre Marcos Roberto de Moraes [Maromo]</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
